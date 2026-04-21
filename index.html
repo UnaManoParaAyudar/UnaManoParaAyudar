@@ -421,32 +421,29 @@
         }
 
         .image-placeholder {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(45deg, var(--primary-light), var(--accent));
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .image-placeholder::after {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);
-        }
+    width: 100%;
+    height: 500px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    position: relative;
+}
 
-        .image-placeholder svg {
-            width: 120px;
-            height: 120px;
-            color: rgba(255,255,255,0.8);
-            z-index: 2;
-        }
+.image-placeholder::after {
+    display: none;
+}
+
+.image-placeholder svg {
+    display: none;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
 
         /* ==========================================================================
            TRUST BAR
@@ -1150,7 +1147,7 @@
                     <li><a href="#contacto">Contacto</a></li>
                     <!-- Botón CTA en nav mobile -->
                     <li class="nav-cta">
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                             Consultar
                         </a>
@@ -1176,7 +1173,7 @@
                     <p>Cuidado especializado para adultos mayores y pacientes en recuperación. Enfermería profesional, discreta y con vocación.</p>
                     
                     <div class="hero-buttons">
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp sobre cuidados">
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp sobre cuidados">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                             Consultar por WhatsApp →
                         </a>
@@ -1199,8 +1196,11 @@
                 
                 <div class="hero-image fade-in-up">
                     <div class="image-placeholder">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 10h-4V6a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2z"/></svg>
-                    </div>
+    <img 
+        src="https://plus.unsplash.com/premium_photo-1681996653334-9e16a2b598aa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+        alt="Cuidadora profesional con adulta mayor"
+    />
+</div>
                 </div>
             </div>
         </section>
@@ -1251,7 +1251,7 @@
                         </div>
                         <h3>Cuidados Enfermeros Person.</h3>
                         <p>Atención dedicada según las indicaciones médicas, asegurando el confort y bienestar continuo del paciente en casa.</p>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                     </div>
 
                     <!-- Servicio 2 -->
@@ -1261,7 +1261,7 @@
                         </div>
                         <h3>Administración de Medicación</h3>
                         <p>Control estricto de medicamentos vía oral, endovenosa o intramuscular, respetando meticulosamente horarios y dosis.</p>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                     </div>
 
                     <!-- Servicio 3 -->
@@ -1271,7 +1271,7 @@
                         </div>
                         <h3>Control de Signos Vitales</h3>
                         <p>Monitoreo constante de presión arterial, frecuencia cardíaca, saturación de oxígeno y temperatura corporal.</p>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                     </div>
 
                     <!-- Servicio 4 -->
@@ -1281,7 +1281,7 @@
                         </div>
                         <h3>Curaciones e Inyecciones</h3>
                         <p>Tratamiento experto de heridas quirúrgicas, curación de escaras y aplicación segura de todo tipo de inyectables.</p>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                     </div>
 
                     <!-- Servicio 5 -->
@@ -1291,7 +1291,7 @@
                         </div>
                         <h3>Higiene y Movilización</h3>
                         <p>Asistencia respetuosa en aseo personal, baño en cama, cambios posturales para prevenir úlceras y acompañamiento físico.</p>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                     </div>
 
                     <!-- Servicio 6 -->
@@ -1301,7 +1301,7 @@
                         </div>
                         <h3>Recuperación Postoperatoria</h3>
                         <p>Acompañamiento especializado durante la transición del hospital al hogar para lograr una recuperación segura y sin recaídas.</p>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="service-link">Consultar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
                     </div>
                 </div>
             </div>
@@ -1365,7 +1365,7 @@
                         <p>Tu familiar merece atención de calidad. A lo largo de mi trayectoria, he comprendido que el cuidado médico de excelencia debe ir acompañado sí o sí de calidez humana. Tratamos a tu ser querido con el mismo respeto y dedicación con el que trataríamos al nuestro.</p>
                         <p>Sabemos que tomar esta decisión puede ser difícil, pero estamos aquí para acompañarte en cada paso. Liberándote de la carga para que puedas disfrutar de tiempo de calidad con tu familia.</p>
                         <br>
-                        <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="btn btn-outline">
+                        <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" target="_blank" rel="noopener" class="btn btn-outline">
                             Hablemos de cómo puedo ayudarte →
                         </a>
                     </div>
@@ -1572,7 +1572,7 @@
                         
                         <div class="contact-buttons">
                             <!-- WhatsApp Principal -->
-                            <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                            <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" class="btn btn-whatsapp" target="_blank" rel="noopener">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                                 Iniciar chat en WhatsApp
                             </a>
@@ -1652,7 +1652,7 @@
                 <div class="footer-links">
                     <h4>Contacto</h4>
                     <ul>
-                        <li><a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F">WhatsApp: 11 5812-7638</a></li>
+                        <li><a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F">WhatsApp: 11 5812-7638</a></li>
                         <li><a href="mailto:unamanoparaayudar.caba@gmail.com" style="word-break: break-all;">unamanoparaayudar.caba@gmail.com</a></li>
                         <li><a href="#contacto">CABA, Buenos Aires</a></li>
                     </ul>
@@ -1667,7 +1667,7 @@
     </footer>
 
     <!-- ================== BOTÓN FLOTANTE WHATSAPP ================== -->
-    <a href="https://wa.me/1158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" 
+    <a href="https://wa.me/541158127638?text=Hola%2C%20estoy%20interesado%2Fa%20en%20cuidados%20para%20un%20familiar.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F" 
        class="whatsapp-float" 
        id="wa-float"
        target="_blank" 
